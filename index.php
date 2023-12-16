@@ -2,20 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--    Bootstrap-->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--    Font Awesome-->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Dark mode styles -->
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #008080;
+            color: #ffffff;
+        }
+
+        .btn-dark {
+            background-color: #008080;
+            color: #ffffff;
+        }
+
+        .table {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        .table-dark th {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        .table tbody tr {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        .table tbody tr:hover {
+            background-color: #3d3d3d;
+        }
+    </style>
 
     <title>PHP CRUD</title>
 </head>
+
 <body>
-<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: lightblue">
+<nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #008080">
     PHP CRUD
 </nav>
 
@@ -57,8 +93,8 @@
                     <td> <?php echo $row['email']?> </td>
                     <td> <?php echo $row['gender']?> </td>
                     <td>
-                        <a href="edit.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-                        <a href="delete.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+                        <a href="edit.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-regular fa-pen-to-square fs-5 me-3" style="color: #008080;"></i></a>
+                        <a href="delete.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5" style="color: #008080;"></i></a>
                     </td>
                 </tr>
         <?php
@@ -73,4 +109,6 @@
 <!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
+<!-- ... rest of your code ... -->
 </html>
