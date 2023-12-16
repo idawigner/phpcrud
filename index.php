@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--    Bootstrap-->
@@ -20,7 +20,15 @@
 </nav>
 
 <div class="container">
-
+    <?php
+    if (isset($_GET['msg'])) {
+        $msg = $_GET['msg'];
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        '.$msg.'
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>';
+    }
+    ?>
     <a href="add_new.php" class="btn btn-dark mb-3">Create New</a>
 
     <table class="table table-hover table-centre">
