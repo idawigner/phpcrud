@@ -29,7 +29,7 @@
         </div>';
     }
     ?>
-    <a href="add_new.php" class="btn btn-dark mb-3">Create New</a>
+    <a href="create_new.php" class="btn btn-dark mb-3">Create New</a>
 
     <table class="table table-hover table-centre">
         <thead class="table-dark">
